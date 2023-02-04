@@ -1,5 +1,12 @@
 extends Node2D
 
+onready var faceScene = "res://Face.tscn"
+
+var rng = RandomNumberGenerator.new()
+
+func _ready():
+	rng.randomize()
+		
 
 func _on_Face_face_pressed(face_id):
 	print("TEST SIGNAL")
