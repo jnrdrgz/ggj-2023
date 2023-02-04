@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Test.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[node name="Test" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="T1" type="Node2D" parent="."]
+position = Vector2( 89, 89 )
+
+[node name="Icon" type="Sprite" parent="T1"]
+position = Vector2( 7, 1 )
+texture = ExtResource( 2 )
+
+[node name="T2" type="Node2D" parent="."]
+position = Vector2( 442, 87 )
+
+[node name="Icon2" type="Sprite" parent="T2"]
+position = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+
+[node name="T3" type="Node2D" parent="."]
+position = Vector2( 212, 494 )
+
+[node name="Icon2" type="Sprite" parent="T3"]
+position = Vector2( 3, 3 )
+texture = ExtResource( 2 )
+
+[node name="MyLine" type="Line2D" parent="."]
+position = Vector2( 339, 204 )
+points = PoolVector2Array( -4, 3 )
+default_color = Color( 0, 0, 0, 1 )
