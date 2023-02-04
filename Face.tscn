@@ -62,5 +62,6 @@ margin_right = 271.0
 margin_bottom = 261.0
 rect_scale = Vector2( 0.923742, 0.840814 )
 
+[connection signal="gui_input" from="TextureRect" to="." method="_on_TextureRect_gui_input"]
 [connection signal="mouse_entered" from="TextureRect" to="." method="_on_TextureRect_mouse_entered"]
 [connection signal="mouse_exited" from="TextureRect" to="." method="_on_TextureRect_mouse_exited"]
