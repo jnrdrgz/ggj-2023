@@ -41,6 +41,10 @@ scale = Vector2( 0.461813, 0.315763 )
 position = Vector2( 279, 217 )
 scale = Vector2( 0.461813, 0.315763 )
 
+[node name="SignoPregunta4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 584, 221 )
+scale = Vector2( 0.461813, 0.315763 )
+
 [node name="BookOfFaces" parent="." instance=ExtResource( 2 )]
 visible = false
 position = Vector2( -15, -10 )
