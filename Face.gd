@@ -43,17 +43,33 @@ func set_pelo(pelo):
 func _input(event):
 	pass
 
+func zoom():
+	$Ojos.scale = $Ojos.scale * 2;
+	$Boca.scale = $Boca.scale * 2;
+	$Nariz.scale = $Nariz.scale * 2;
+	$Pelo.scale = $Pelo.scale * 2;
+	$Cara.scale = $Cara.scale * 2;
+func unzoom():
+	$Ojos.scale = $Ojos.scale / 2;
+	$Boca.scale = $Boca.scale / 2;
+	$Nariz.scale = $Nariz.scale / 2;
+	$Pelo.scale = $Pelo.scale / 2;
+	$Cara.scale = $Cara.scale / 2;
+
 func _on_TextureRect_mouse_entered():
 	$Data.visible = true
+	zoom()
+
 
 func _on_TextureRect_mouse_exited():
 	$Data.visible = false
+	unzoom()
 
 func _process(delta):
 	if pressing:
 		var mouse_pos = get_viewport().get_mouse_position()
 		global_position = Vector2(mouse_pos.x-50,mouse_pos.y-50) 
-
+	
 	if not pressing:
 		if not face_not_pressed_signal_emitted:
 			emit_signal("face_not_pressed")
