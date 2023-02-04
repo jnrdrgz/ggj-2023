@@ -27,22 +27,79 @@ margin_bottom = 559.0
 text = "Anterior"
 
 [node name="Faces" type="Node2D" parent="."]
+position = Vector2( 79, 60 )
+scale = Vector2( 0.4, 0.4 )
 
 [node name="Face" parent="Faces" instance=ExtResource( 2 )]
-position = Vector2( 240, 88 )
-scale = Vector2( 0.455613, 0.423667 )
-
-[node name="Face3" parent="Faces" instance=ExtResource( 2 )]
-position = Vector2( 495, 84 )
-scale = Vector2( 0.455613, 0.423667 )
-
-[node name="Face4" parent="Faces" instance=ExtResource( 2 )]
-position = Vector2( 653, 83 )
-scale = Vector2( 0.455613, 0.423667 )
+position = Vector2( 49, 61 )
 
 [node name="Face2" parent="Faces" instance=ExtResource( 2 )]
-position = Vector2( 74, 89 )
-scale = Vector2( 0.425358, 0.401018 )
+position = Vector2( 460, 70 )
 
-[connection signal="face_not_pressed" from="Faces/Face" to="." method="_on_Face_face_not_pressed"]
-[connection signal="face_pressed" from="Faces/Face" to="." method="_on_Face_face_pressed"]
+[node name="Face3" parent="Faces" instance=ExtResource( 2 )]
+position = Vector2( 42.5, 437.5 )
+
+[node name="Face4" parent="Faces" instance=ExtResource( 2 )]
+position = Vector2( 430, 432.5 )
+
+[node name="Face5" parent="Faces" instance=ExtResource( 2 )]
+position = Vector2( 22.5001, 830 )
+
+[node name="Face6" parent="Faces" instance=ExtResource( 2 )]
+position = Vector2( 410, 825 )
+
+[node name="Face7" parent="Faces" instance=ExtResource( 2 )]
+position = Vector2( 1032.5, 797.5 )
+
+[node name="Face8" parent="Faces" instance=ExtResource( 2 )]
+position = Vector2( 1007.5, 455 )
+
+[node name="Face9" parent="Faces" instance=ExtResource( 2 )]
+position = Vector2( 1027.5, 82.5001 )
+
+[node name="Face10" parent="Faces" instance=ExtResource( 2 )]
+position = Vector2( 1410, 82.5 )
+
+[node name="Face11" parent="Faces" instance=ExtResource( 2 )]
+position = Vector2( 1405, 467.5 )
+
+[node name="Face12" parent="Faces" instance=ExtResource( 2 )]
+position = Vector2( 1410, 817.5 )
+
+[node name="FacesPlaceholders" type="Node2D" parent="."]
+
+[node name="PH1" type="Node2D" parent="FacesPlaceholders"]
+position = Vector2( 95, 84 )
+
+[node name="PH2" type="Node2D" parent="FacesPlaceholders"]
+position = Vector2( 259, 89 )
+
+[node name="PH3" type="Node2D" parent="FacesPlaceholders"]
+position = Vector2( 492, 91 )
+
+[node name="PH4" type="Node2D" parent="FacesPlaceholders"]
+position = Vector2( 644, 92 )
+
+[node name="PH5" type="Node2D" parent="FacesPlaceholders"]
+position = Vector2( 96, 236 )
+
+[node name="PH6" type="Node2D" parent="FacesPlaceholders"]
+position = Vector2( 250, 234 )
+
+[node name="PH7" type="Node2D" parent="FacesPlaceholders"]
+position = Vector2( 481, 242 )
+
+[node name="PH8" type="Node2D" parent="FacesPlaceholders"]
+position = Vector2( 645, 243 )
+
+[node name="PH9" type="Node2D" parent="FacesPlaceholders"]
+position = Vector2( 84, 393 )
+
+[node name="PH10" type="Node2D" parent="FacesPlaceholders"]
+position = Vector2( 242, 394 )
+
+[node name="PH11" type="Node2D" parent="FacesPlaceholders"]
+position = Vector2( 489, 393 )
+
+[node name="PH12" type="Node2D" parent="FacesPlaceholders"]
+position = Vector2( 648, 396 )

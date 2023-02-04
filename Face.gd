@@ -9,6 +9,8 @@ var original_pos
 var rng
 var id 
 
+var original_scale
+
 signal face_pressed(id)
 signal face_not_pressed
 
@@ -18,6 +20,8 @@ func _ready():
 	
 	id = rng.randi()
 	print(id)
+	
+	original_scale = scale
 	
 	original_pos = global_position
 	$Data/DataLabel.text = "Género: %s\n\nNacionalidad: %s\n\n Profesión: %s\n\n" % [genero, nacionalidad,profesion]
@@ -44,17 +48,21 @@ func _input(event):
 	pass
 
 func zoom():
-	$Ojos.scale = $Ojos.scale * 2;
-	$Boca.scale = $Boca.scale * 2;
-	$Nariz.scale = $Nariz.scale * 2;
-	$Pelo.scale = $Pelo.scale * 2;
-	$Cara.scale = $Cara.scale * 2;
-func unzoom():
-	$Ojos.scale = $Ojos.scale / 2;
-	$Boca.scale = $Boca.scale / 2;
-	$Nariz.scale = $Nariz.scale / 2;
-	$Pelo.scale = $Pelo.scale / 2;
-	$Cara.scale = $Cara.scale / 2;
+	if not ($Ojos.scale == original_scale * 2):
+		$Ojos.scale = $Ojos.scale * 2;
+		$Boca.scale = $Boca.scale * 2;
+		$Nariz.scale = $Nariz.scale * 2;
+		$Pelo.scale = $Pelo.scale * 2;
+		$Cara.scale = $Cara.scale * 2;
+
+func unzoom():	
+	print($Ojos.scale, original_scale / 2)
+	if not ($Ojos.scale == original_scale / 2):
+		$Ojos.scale = $Ojos.scale / 2;
+		$Boca.scale = $Boca.scale / 2;
+		$Nariz.scale = $Nariz.scale / 2;
+		$Pelo.scale = $Pelo.scale / 2;
+		$Cara.scale = $Cara.scale / 2;
 
 func _on_TextureRect_mouse_entered():
 	$Data.visible = true
@@ -82,6 +90,7 @@ func _on_TextureRect_gui_input(event):
 		pressing = true
 		face_not_pressed_signal_emitted = false
 		print("pressed")
+		#unzoom()
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and not event.pressed:
 		pressing = false
 		global_position = original_pos
