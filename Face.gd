@@ -9,7 +9,7 @@ var original_pos
 var rng
 var id 
 
-signal face_pressed
+signal face_pressed(id)
 signal face_not_pressed
 
 func _ready():
@@ -29,7 +29,7 @@ func set_cara(cara):
 	$Cara.texture = load("res://assets/%s/cara/cara%s.png" % [genero, cara])
 
 func set_boca(boca):
-	$Cara.texture = load("res://assets/%s/boca/boca%s.png" % [genero, boca])
+	$Boca.texture = load("res://assets/%s/boca/boca%s.png" % [genero, boca])
 
 func set_nariz(nariz):
 	$Nariz.texture = load("res://assets/%s/nariz/nariz%s.png" % [genero, nariz])
@@ -54,11 +54,17 @@ func _process(delta):
 		var mouse_pos = get_viewport().get_mouse_position()
 		global_position = Vector2(mouse_pos.x-50,mouse_pos.y-50) 
 
+	if not pressing:
+		if not face_not_pressed_signal_emitted:
+			emit_signal("face_not_pressed")
+			face_not_pressed_signal_emitted = true
+
 
 func _on_TextureRect_gui_input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
-		emit_signal("face_pressed")
+		emit_signal("face_pressed", id)
 		pressing = true
+		face_not_pressed_signal_emitted = false
 		print("pressed")
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and not event.pressed:
 		pressing = false

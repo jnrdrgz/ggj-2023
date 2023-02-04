@@ -44,4 +44,5 @@ scale = Vector2( 0.455613, 0.423667 )
 position = Vector2( 74, 89 )
 scale = Vector2( 0.425358, 0.401018 )
 
+[connection signal="face_not_pressed" from="Faces/Face" to="." method="_on_Face_face_not_pressed"]
 [connection signal="face_pressed" from="Faces/Face" to="." method="_on_Face_face_pressed"]
