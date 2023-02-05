@@ -1,31 +1,43 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://RandomFace.gd" type="Script" id=1]
 [ext_resource path="res://assets/hombre/boca/boca1.png" type="Texture" id=2]
-[ext_resource path="res://assets/hombre/nariz/nariz1.png" type="Texture" id=3]
+[ext_resource path="res://assets/hombre/pelo/pelo1.png" type="Texture" id=3]
 [ext_resource path="res://assets/hombre/ojos/ojos1.png" type="Texture" id=4]
-[ext_resource path="res://assets/hombre/pelo/pelo2.png" type="Texture" id=5]
-[ext_resource path="res://assets/hombre/cara/cara1.png" type="Texture" id=6]
+[ext_resource path="res://assets/hombre/cara/cara1.png" type="Texture" id=5]
+[ext_resource path="res://assets/hombre1/ojos/ojos1.png" type="Texture" id=6]
+[ext_resource path="res://assets/hombre/nariz/nariz1.png" type="Texture" id=7]
 
 [node name="RandomFace" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="Cara" type="Sprite" parent="."]
 position = Vector2( 128, 128 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="Boca" type="Sprite" parent="."]
-position = Vector2( 128, 128 )
+position = Vector2( 128, 127 )
 texture = ExtResource( 2 )
 
 [node name="Nariz" type="Sprite" parent="."]
-position = Vector2( 128, 128 )
+position = Vector2( 127, 129 )
+texture = ExtResource( 7 )
+
+[node name="OjoD" type="Sprite" parent="."]
+visible = false
+position = Vector2( 128, 131 )
+texture = ExtResource( 4 )
+
+[node name="OjoI" type="Sprite" parent="."]
+visible = false
+position = Vector2( 88, 125 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="Pelo" type="Sprite" parent="."]
+position = Vector2( 128, 126 )
 texture = ExtResource( 3 )
 
 [node name="Ojos" type="Sprite" parent="."]
-position = Vector2( 128, 128 )
+position = Vector2( 131, 127 )
 texture = ExtResource( 4 )
-
-[node name="Pelo" type="Sprite" parent="."]
-position = Vector2( 128, 128 )
-texture = ExtResource( 5 )

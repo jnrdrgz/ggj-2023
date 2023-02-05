@@ -1,49 +1,67 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://RandomFace.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Face.tscn" type="PackedScene" id=1]
 [ext_resource path="res://BookOfFaces.tscn" type="PackedScene" id=2]
 [ext_resource path="res://MainScene.gd" type="Script" id=3]
-[ext_resource path="res://SignoPregunta.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/fondo.png" type="Texture" id=5]
 
 [node name="Main" type="Node2D"]
 position = Vector2( 10, 15 )
+scale = Vector2( 1.07729, 1.00868 )
 script = ExtResource( 3 )
 
-[node name="RandomFace2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 379, 38 )
-scale = Vector2( 0.33, 0.33 )
+[node name="Fondo" type="Sprite" parent="."]
+position = Vector2( 388, 302 )
+texture = ExtResource( 5 )
 
-[node name="RandomFace5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 436, 217 )
-scale = Vector2( 0.33, 0.33 )
+[node name="Face" parent="." instance=ExtResource( 1 )]
+position = Vector2( 211.642, 17.8452 )
+scale = Vector2( 0.363705, 0.368177 )
+generate_randomly = true
 
-[node name="RandomFace6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 325, 401 )
-scale = Vector2( 0.33, 0.33 )
+[node name="Face2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 408.433, 11.8968 )
+scale = Vector2( 0.363705, 0.368177 )
+generate_randomly = true
 
-[node name="RandomFace7" parent="." instance=ExtResource( 1 )]
-position = Vector2( 482, 400 )
-scale = Vector2( 0.33, 0.33 )
+[node name="Face9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 659.99, 136.813 )
+scale = Vector2( 0.363705, 0.368177 )
+is_incognito = true
+generate_randomly = true
 
-[node name="RandomFace8" parent="." instance=ExtResource( 1 )]
-position = Vector2( 619, 399 )
-scale = Vector2( 0.33, 0.33 )
+[node name="Face3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 150.377, 135.821 )
+scale = Vector2( 0.363705, 0.368177 )
+is_incognito = true
+generate_randomly = true
 
-[node name="SignoPregunta" parent="." instance=ExtResource( 4 )]
-position = Vector2( 240, 36 )
-scale = Vector2( 0.461813, 0.315763 )
+[node name="Face4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 317.463, 135.821 )
+scale = Vector2( 0.363705, 0.368177 )
+generate_randomly = true
 
-[node name="SignoPregunta2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 139, 216 )
-scale = Vector2( 0.461813, 0.315763 )
+[node name="Face5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 489.191, 134.83 )
+scale = Vector2( 0.363705, 0.368177 )
+generate_randomly = true
 
-[node name="SignoPregunta3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 279, 217 )
-scale = Vector2( 0.461813, 0.315763 )
+[node name="Face6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 338.813, 292.462 )
+scale = Vector2( 0.363705, 0.368177 )
+is_incognito = true
+generate_randomly = true
 
-[node name="SignoPregunta4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 584, 221 )
-scale = Vector2( 0.461813, 0.315763 )
+[node name="Face7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 505.899, 292.462 )
+scale = Vector2( 0.363705, 0.368177 )
+is_incognito = true
+generate_randomly = true
+
+[node name="Face8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 677.627, 291.471 )
+scale = Vector2( 0.363705, 0.368177 )
+generate_randomly = true
 
 [node name="BookOfFaces" parent="." instance=ExtResource( 2 )]
 visible = false

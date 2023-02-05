@@ -56,8 +56,6 @@ func _ready():
 	var father1 = get_random_face("hombre")
 	var mother1 = get_random_face("mujer")
 
-	
-	
 	var f = add_to_gen("FamilyGen1", father1 )
 	var m = add_to_gen("FamilyGen1", mother1 )
 	var center_scale = Vector2(128,128)*0.25

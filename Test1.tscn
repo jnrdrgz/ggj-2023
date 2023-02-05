@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Face.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Test1.gd" type="Script" id=2]
+
+[node name="Test" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Face2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 181, 80 )
+scale = Vector2( 0.489474, 0.489362 )
+is_incognito = true
+
+[node name="Face" parent="." instance=ExtResource( 1 )]
+position = Vector2( 487, 80 )
+scale = Vector2( 0.489474, 0.489362 )
